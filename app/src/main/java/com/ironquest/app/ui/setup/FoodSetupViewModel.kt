@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.ironquest.app.domain.appearance.AppStyle
 import com.ironquest.app.domain.appearance.AppearanceSettings
 import com.ironquest.app.domain.appearance.Palette
+import com.ironquest.app.domain.appearance.ThemeMode
 import com.ironquest.app.domain.nutrition.FoodTrackingMode
 import com.ironquest.app.domain.repository.AppSettingsRepository
 import com.ironquest.app.ui.food.DailyTargetsForm
@@ -39,6 +40,7 @@ data class FoodSetupUiState(
 sealed interface FoodSetupAction {
     data class SetStyle(val style: AppStyle) : FoodSetupAction
     data class SetPalette(val palette: Palette) : FoodSetupAction
+    data class SetThemeMode(val mode: ThemeMode) : FoodSetupAction
     data object Continue : FoodSetupAction
     data class Choose(val mode: FoodTrackingMode) : FoodSetupAction
     data object Back : FoodSetupAction
@@ -82,6 +84,10 @@ class FoodSetupViewModel @Inject constructor(
             }
             is FoodSetupAction.SetPalette -> {
                 settings.setPalette(action.palette)
+                _uiState.update { it.copy(appearance = settings.currentAppearance()) }
+            }
+            is FoodSetupAction.SetThemeMode -> {
+                settings.setThemeMode(action.mode)
                 _uiState.update { it.copy(appearance = settings.currentAppearance()) }
             }
             FoodSetupAction.Continue -> _uiState.update { it.copy(step = SetupStep.CHOOSE) }

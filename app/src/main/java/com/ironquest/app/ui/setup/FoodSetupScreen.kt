@@ -31,6 +31,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ironquest.app.R
 import com.ironquest.app.domain.appearance.AppStyle
+import com.ironquest.app.domain.appearance.ThemeMode
 import com.ironquest.app.domain.nutrition.FoodTrackingMode
 import com.ironquest.app.ui.food.TargetField
 import com.ironquest.app.ui.kit.BackHeader
@@ -43,6 +44,7 @@ import com.ironquest.app.ui.kit.PrimaryButton
 import com.ironquest.app.ui.kit.RowGroup
 import com.ironquest.app.ui.kit.RuledRow
 import com.ironquest.app.ui.kit.SecondaryButton
+import com.ironquest.app.ui.kit.SegmentedControl
 import com.ironquest.app.ui.theme.IronTheme
 import com.ironquest.app.ui.you.labelRes
 
@@ -117,6 +119,8 @@ private fun AppearanceStep(state: FoodSetupUiState, onAction: (FoodSetupAction) 
         modifier = Modifier.padding(top = 8.dp),
     )
     PaletteSwatches(state.appearance.palette, { label(it.labelRes()) }, { onAction(FoodSetupAction.SetPalette(it)) })
+    Text(stringResource(R.string.setup_appearance_mode), style = type.secondary, color = colors.muted, modifier = Modifier.padding(top = 8.dp))
+    SegmentedControl(listOf(ThemeMode.LIGHT, ThemeMode.DARK, ThemeMode.SYSTEM), state.appearance.mode, { label(it.labelRes()) }, { onAction(FoodSetupAction.SetThemeMode(it)) })
     Text(stringResource(R.string.setup_appearance_preview), style = type.secondary, color = colors.muted, modifier = Modifier.padding(top = 8.dp))
     TodayPreview()
     PrimaryButton(stringResource(R.string.setup_appearance_continue), { onAction(FoodSetupAction.Continue) }, Modifier.fillMaxWidth().padding(top = 8.dp))

@@ -301,11 +301,4 @@ internal fun FoodTrackingMode.labelRes() = when (this) {
     FoodTrackingMode.BOTH -> R.string.setup_food_mode_both
 }
 
-@StringRes
-private fun ThemeMode.labelRes() = when (this) {
-    ThemeMode.LIGHT -> R.string.you_mode_light
-    ThemeMode.DARK -> R.string.you_mode_dark
-    ThemeMode.SYSTEM -> R.string.you_mode_system
-}
-
 class BackupActions(val onSave: () -> Unit, val onLoad: () -> Unit)

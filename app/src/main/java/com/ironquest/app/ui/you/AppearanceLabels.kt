@@ -4,6 +4,7 @@ import androidx.annotation.StringRes
 import com.ironquest.app.R
 import com.ironquest.app.domain.appearance.AppStyle
 import com.ironquest.app.domain.appearance.Palette
+import com.ironquest.app.domain.appearance.ThemeMode
 
 /** Shared by the You tab's Appearance section and the first-launch appearance step. */
 @StringRes
@@ -20,4 +21,11 @@ internal fun Palette.labelRes() = when (this) {
     Palette.PLUM -> R.string.you_palette_plum
     Palette.CHALKBOARD -> R.string.you_palette_chalkboard
     Palette.STEEL -> R.string.you_palette_steel
+}
+
+@StringRes
+internal fun ThemeMode.labelRes() = when (this) {
+    ThemeMode.LIGHT -> R.string.you_mode_light
+    ThemeMode.DARK -> R.string.you_mode_dark
+    ThemeMode.SYSTEM -> R.string.you_mode_system
 }

@@ -4,6 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import com.ironquest.app.domain.appearance.AppStyle
 import com.ironquest.app.domain.appearance.AppearanceSettings
 import com.ironquest.app.domain.appearance.Palette
+import com.ironquest.app.domain.appearance.ThemeMode
 import com.ironquest.app.domain.nutrition.FoodTrackingMode
 import com.ironquest.app.domain.nutrition.MacroTargets
 import com.ironquest.app.fakes.FakeAppSettingsRepository
@@ -67,6 +68,14 @@ class FoodSetupViewModelTest {
         assertEquals(AppearanceSettings(style = AppStyle.BOLD, palette = AppStyle.BOLD.defaultPalette), settings.appearance.value)
         assertEquals(settings.appearance.value, vm.uiState.value.appearance)
         assertTrue(settings.setupPending)
+    }
+
+    @Test
+    fun `light or dark is saved at once and kept when the style changes`() = runVmTest { vm, _ ->
+        vm.onAction(FoodSetupAction.SetThemeMode(ThemeMode.DARK))
+        assertEquals(ThemeMode.DARK, settings.appearance.value.mode)
+        vm.onAction(FoodSetupAction.SetStyle(AppStyle.SOFT))
+        assertEquals(ThemeMode.DARK, vm.uiState.value.appearance.mode)
     }
 
     @Test
