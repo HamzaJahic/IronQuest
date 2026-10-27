@@ -302,22 +302,6 @@ internal fun FoodTrackingMode.labelRes() = when (this) {
 }
 
 @StringRes
-private fun AppStyle.labelRes() = when (this) {
-    AppStyle.DIARY -> R.string.you_style_diary
-    AppStyle.BOLD -> R.string.you_style_bold
-    AppStyle.SOFT -> R.string.you_style_soft
-}
-
-@StringRes
-private fun Palette.labelRes() = when (this) {
-    Palette.FIELD_NOTES -> R.string.you_palette_field_notes
-    Palette.HIGHLIGHTER -> R.string.you_palette_highlighter
-    Palette.PLUM -> R.string.you_palette_plum
-    Palette.CHALKBOARD -> R.string.you_palette_chalkboard
-    Palette.STEEL -> R.string.you_palette_steel
-}
-
-@StringRes
 private fun ThemeMode.labelRes() = when (this) {
     ThemeMode.LIGHT -> R.string.you_mode_light
     ThemeMode.DARK -> R.string.you_mode_dark

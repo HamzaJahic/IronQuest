@@ -1,6 +1,9 @@
 package com.ironquest.app.ui.setup
 
 import androidx.lifecycle.SavedStateHandle
+import com.ironquest.app.domain.appearance.AppStyle
+import com.ironquest.app.domain.appearance.AppearanceSettings
+import com.ironquest.app.domain.appearance.Palette
 import com.ironquest.app.domain.nutrition.FoodTrackingMode
 import com.ironquest.app.domain.nutrition.MacroTargets
 import com.ironquest.app.fakes.FakeAppSettingsRepository
@@ -38,6 +41,32 @@ class FoodSetupViewModelTest {
         } finally {
             Dispatchers.resetMain()
         }
+    }
+
+    @Test
+    fun `first launch opens on appearance, continue goes on to food`() = runVmTest { vm, _ ->
+        assertEquals(SetupStep.APPEARANCE, vm.uiState.value.step)
+        vm.onAction(FoodSetupAction.Continue)
+        assertEquals(SetupStep.CHOOSE, vm.uiState.value.step)
+        vm.onAction(FoodSetupAction.Back)
+        assertEquals(SetupStep.APPEARANCE, vm.uiState.value.step)
+    }
+
+    @Test
+    fun `the settings page skips appearance`() = runVmTest(fromSettings = true) { vm, _ ->
+        assertEquals(SetupStep.CHOOSE, vm.uiState.value.step)
+        vm.onAction(FoodSetupAction.Back)
+        assertEquals(SetupStep.CHOOSE, vm.uiState.value.step)
+    }
+
+    @Test
+    fun `style and palette are saved at once, a style resets the palette`() = runVmTest { vm, _ ->
+        vm.onAction(FoodSetupAction.SetPalette(Palette.STEEL))
+        assertEquals(Palette.STEEL, settings.appearance.value.palette)
+        vm.onAction(FoodSetupAction.SetStyle(AppStyle.BOLD))
+        assertEquals(AppearanceSettings(style = AppStyle.BOLD, palette = AppStyle.BOLD.defaultPalette), settings.appearance.value)
+        assertEquals(settings.appearance.value, vm.uiState.value.appearance)
+        assertTrue(settings.setupPending)
     }
 
     @Test
@@ -132,6 +161,6 @@ class FoodSetupViewModelTest {
     @Test
     fun `setup starts with no mode chosen`() = runVmTest { vm, _ ->
         assertNull(vm.uiState.value.mode)
-        assertEquals(SetupStep.CHOOSE, vm.uiState.value.step)
+        assertEquals(SetupStep.APPEARANCE, vm.uiState.value.step)
     }
 }

@@ -2,6 +2,9 @@ package com.ironquest.app.ui.setup
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.ironquest.app.domain.appearance.AppStyle
+import com.ironquest.app.domain.appearance.AppearanceSettings
+import com.ironquest.app.domain.appearance.Palette
 import com.ironquest.app.domain.nutrition.FoodTrackingMode
 import com.ironquest.app.domain.repository.AppSettingsRepository
 import com.ironquest.app.ui.food.DailyTargetsForm
@@ -17,7 +20,8 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
-enum class SetupStep { CHOOSE, PLAN_NEXT, TARGETS }
+/** [APPEARANCE] opens the first-launch setup only; the settings page starts at [CHOOSE]. */
+enum class SetupStep { APPEARANCE, CHOOSE, PLAN_NEXT, TARGETS }
 
 /** Where the app goes once the setup (or the settings page) is done. */
 enum class SetupExit { TODAY, IMPORT_PLAN, NEW_PLAN }
@@ -29,9 +33,13 @@ data class FoodSetupUiState(
     val fromSettings: Boolean = false,
     val texts: DailyTargetsTexts = DailyTargetsTexts(),
     val targetsInvalid: Boolean = false,
+    val appearance: AppearanceSettings = AppearanceSettings.Default,
 )
 
 sealed interface FoodSetupAction {
+    data class SetStyle(val style: AppStyle) : FoodSetupAction
+    data class SetPalette(val palette: Palette) : FoodSetupAction
+    data object Continue : FoodSetupAction
     data class Choose(val mode: FoodTrackingMode) : FoodSetupAction
     data object Back : FoodSetupAction
     data class TargetChanged(val field: TargetField, val text: String) : FoodSetupAction
@@ -53,7 +61,12 @@ class FoodSetupViewModel @Inject constructor(
     private val fromSettings: Boolean = savedStateHandle[ARG_FROM_SETTINGS] ?: false
 
     private val _uiState = MutableStateFlow(
-        FoodSetupUiState(mode = if (fromSettings) settings.currentFood().mode else null, fromSettings = fromSettings),
+        FoodSetupUiState(
+            step = if (fromSettings) SetupStep.CHOOSE else SetupStep.APPEARANCE,
+            mode = if (fromSettings) settings.currentFood().mode else null,
+            fromSettings = fromSettings,
+            appearance = settings.currentAppearance(),
+        ),
     )
     val uiState: StateFlow<FoodSetupUiState> = _uiState.asStateFlow()
 
@@ -62,8 +75,18 @@ class FoodSetupViewModel @Inject constructor(
 
     fun onAction(action: FoodSetupAction) {
         when (action) {
+            // Applied at once: MainActivity re-themes the whole app, this screen included.
+            is FoodSetupAction.SetStyle -> {
+                settings.setStyle(action.style)
+                _uiState.update { it.copy(appearance = settings.currentAppearance()) }
+            }
+            is FoodSetupAction.SetPalette -> {
+                settings.setPalette(action.palette)
+                _uiState.update { it.copy(appearance = settings.currentAppearance()) }
+            }
+            FoodSetupAction.Continue -> _uiState.update { it.copy(step = SetupStep.CHOOSE) }
             is FoodSetupAction.Choose -> choose(action.mode)
-            FoodSetupAction.Back -> _uiState.update { it.copy(step = SetupStep.CHOOSE, targetsInvalid = false) }
+            FoodSetupAction.Back -> _uiState.update { it.copy(step = previousStep(it.step), targetsInvalid = false) }
             is FoodSetupAction.TargetChanged -> _uiState.update { it.copy(texts = it.texts.with(action.field, action.text), targetsInvalid = false) }
             FoodSetupAction.SaveTargets -> saveTargets()
             FoodSetupAction.Skip -> finish(SetupExit.TODAY)
@@ -99,6 +122,12 @@ class FoodSetupViewModel @Inject constructor(
     private fun finish(next: SetupExit) {
         if (!fromSettings) settings.finishFoodSetup()
         _events.trySend(FoodSetupEvent.Exit(next))
+    }
+
+    private fun previousStep(step: SetupStep): SetupStep = when (step) {
+        SetupStep.APPEARANCE -> SetupStep.APPEARANCE
+        SetupStep.CHOOSE -> if (fromSettings) SetupStep.CHOOSE else SetupStep.APPEARANCE
+        SetupStep.PLAN_NEXT, SetupStep.TARGETS -> SetupStep.CHOOSE
     }
 
     private fun DailyTargetsTexts.with(field: TargetField, text: String) = when (field) {

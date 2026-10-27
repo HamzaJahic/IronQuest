@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="setup_appearance_title">Make it yours</string>
+    <string name="setup_appearance_intro">Pick a style and colours. You can change them later on the You tab.</string>
+    <string name="setup_appearance_style">Style</string>
+    <string name="setup_appearance_palette">Palette · %1$s</string>
+    <string name="setup_appearance_preview">Preview</string>
+    <string name="setup_appearance_preview_cd">Preview of the Today screen</string>
+    <string name="setup_appearance_continue">Continue</string>
     <string name="setup_food_title">How do you want to track food?</string>
     <string name="setup_food_settings_title">Food tracking</string>
     <string name="setup_food_intro">You can change this later on the You tab.</string>

@@ -119,7 +119,7 @@ fun TodayContent(
                 bottom = contentPadding.calculateBottomPadding() + 24.dp,
             ),
     ) {
-        Header(state)
+        TodayHeader(state)
         Text(
             state.mainNote.resolve(),
             style = type.body,
@@ -147,7 +147,7 @@ fun TodayContent(
         }
 
         SectionHeader(stringResource(R.string.today_workout_title))
-        WorkoutLine(state.exercises)
+        TodayWorkoutLine(state.exercises)
         Spacer(Modifier.height(16.dp))
         PrimaryButton(
             text = stringResource(if (main.isInProgress) R.string.today_workout_resume else R.string.today_workout_start),
@@ -186,8 +186,9 @@ fun TodayContent(
     }
 }
 
+/** Date, day name and level mark, laid out per style; also drawn by the appearance preview in setup. */
 @Composable
-private fun Header(state: TodayUiState) {
+internal fun TodayHeader(state: TodayUiState) {
     val colors = IronTheme.colors
     val type = IronTheme.type
     val main = state.main ?: return
@@ -244,7 +245,7 @@ private fun goalColor(type: GoalType): Color = when (type) {
 }
 
 @Composable
-private fun WorkoutLine(exercises: List<ExerciseLineUi>) {
+internal fun TodayWorkoutLine(exercises: List<ExerciseLineUi>) {
     val colors = IronTheme.colors
     val supersetJoin = stringResource(R.string.today_workout_superset_join)
     val limitBreakMark = stringResource(R.string.today_workout_limit_break_mark)
