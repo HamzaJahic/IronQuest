@@ -322,4 +322,6 @@ Currently untested: workout Room DAOs and queries (especially the `SetDetailRow`
 
 ## Repo state
 
-This directory is **not a git repository** — there is no rollback safety net. Prefer additive, verifiable steps, and consider proposing `git init` before any large refactor.
+Git repository on the owner's **personal** GitHub (`HamzaJahic/IronQuest`, private, branch `main`). The remote uses the SSH alias `github-personal` and the folder gets its personal identity through an `includeIf` in the global git config; never change global git settings (they belong to a work account). Commit or push only when asked. Claude working files (`claudedocs/`, `docs/superpowers/`, `.claude/`, `.superpowers/`) are git-ignored; `CLAUDE.md` is tracked.
+
+**Releases:** pushing a tag `vX.Y.Z` runs `.github/workflows/release.yml`: unit tests, `:app:assembleRelease` signed with the upload key from Actions secrets (`KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, `KEY_PASSWORD`), signature check, then a **draft** release with `IronQuest-vX.Y.Z.apk` to publish by hand. `versionName` = X.Y.Z, `versionCode` = X·1 000 000 + Y·1 000 + Z (env `VERSION_NAME` / `VERSION_CODE`; locally 0.1.0 / 1). The key is never in the repo: `app/build.gradle.kts` only signs when `IRONQUEST_KEYSTORE` is set, so local release builds are unsigned. Losing the key means users can't update without uninstalling.

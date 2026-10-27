@@ -15,8 +15,9 @@ android {
         applicationId = "com.ironquest.app"
         minSdk = 26 // java.time without desugaring
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        // The release workflow derives both from the git tag (v1.2.3); local builds keep these defaults.
+        versionCode = providers.environmentVariable("VERSION_CODE").orNull?.toInt() ?: 1
+        versionName = providers.environmentVariable("VERSION_NAME").orNull ?: "0.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // Shipped languages. Libraries bring strings for ~85 locales; keep only ours. Add a locale here
         // when its translation lands. The pseudo-locales (en-XA, ar-XB) are added for debug builds only,
@@ -28,11 +29,26 @@ android {
         generateLocaleConfig = true
     }
 
+    // The upload key lives only in GitHub Actions secrets and the owner's password manager, never in
+    // the repo. Without IRONQUEST_KEYSTORE set (any local build) the release APK is simply unsigned.
+    val releaseKeystore = providers.environmentVariable("IRONQUEST_KEYSTORE").orNull
+    signingConfigs {
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = file(releaseKeystore)
+                storePassword = providers.environmentVariable("IRONQUEST_KEYSTORE_PASSWORD").get()
+                keyAlias = providers.environmentVariable("IRONQUEST_KEY_ALIAS").get()
+                keyPassword = providers.environmentVariable("IRONQUEST_KEY_PASSWORD").get()
+            }
+        }
+    }
+
     buildTypes {
         debug {
             isPseudoLocalesEnabled = true
         }
         release {
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
