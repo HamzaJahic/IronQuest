@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="celebration_level">Level %1$d</string>
+    <!-- %1$s stat name, %2$d its new level -->
+    <string name="celebration_stat_level">%1$s %2$d</string>
+    <string name="celebration_level_reached">Level %1$d reached</string>
+    <!-- %2$s is a list of stat level-ups -->
+    <string name="celebration_level_stats_reached">Level %1$d reached · %2$s</string>
+    <string name="celebration_stats_reached">%1$s reached</string>
+    <!-- %1$s is the unit word ("day", "week", "month") -->
+    <string name="kit_date_stepper_previous_cd">Previous %1$s</string>
+    <string name="kit_date_stepper_next_cd">Next %1$s</string>
+    <string name="kit_date_stepper_pick_label">Pick a %1$s</string>
+    <!-- %1$s is the back label ("Back") -->
+    <string name="kit_back_header_back">‹ %1$s</string>
+    <!-- %1$s is the section title -->
+    <string name="kit_section_collapse_label">Collapse %1$s</string>
+    <string name="kit_section_expand_label">Expand %1$s</string>
+    <string name="kit_section_expanded">Expanded</string>
+    <string name="kit_section_collapsed">Collapsed</string>
+    <string name="kit_level_label">Level</string>
+    <!-- Short level label of the top-bar style; %1$d is the level -->
+    <string name="kit_level_short">LV %1$d</string>
+    <string name="kit_time_dialog_set">Set</string>
+    <string name="kit_discard_title">Discard changes?</string>
+    <string name="kit_discard_text">Your edits aren\'t saved.</string>
+    <string name="kit_discard_confirm">Discard</string>
+    <string name="kit_discard_keep_editing">Keep editing</string>
+</resources>

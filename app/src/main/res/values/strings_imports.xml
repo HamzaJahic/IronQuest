@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Import screens: kind chips, AI prompt, error report, parse problems. CSV column names and example files stay English in code. -->
+    <string name="import_kind_program_label">Whole plan</string>
+    <!-- Used in "Take the <subject> we discussed…". The _indefinite variants carry their article for "as <a/an …>" sentences. -->
+    <string name="import_kind_program_subject">workout plan</string>
+    <string name="import_kind_program_subject_indefinite">a workout plan</string>
+    <string name="import_kind_workout_day_label">One day</string>
+    <string name="import_kind_workout_day_subject">workout</string>
+    <string name="import_kind_workout_day_subject_indefinite">a workout</string>
+    <string name="import_kind_workout_days_label">Several days</string>
+    <string name="import_kind_workout_days_subject">set of workouts</string>
+    <string name="import_kind_workout_days_subject_indefinite">a set of workouts</string>
+    <string name="import_kind_exercise_label">One exercise</string>
+    <string name="import_kind_exercise_subject">exercise</string>
+    <string name="import_kind_exercise_subject_indefinite">an exercise</string>
+    <string name="import_kind_exercises_label">Several exercises</string>
+    <string name="import_kind_exercises_subject">list of exercises</string>
+    <string name="import_kind_exercises_subject_indefinite">a list of exercises</string>
+    <string name="import_kind_meal_label">One meal</string>
+    <string name="import_kind_meal_subject">meal</string>
+    <string name="import_kind_meal_subject_indefinite">a meal</string>
+    <string name="import_kind_meals_label">Several meals</string>
+    <string name="import_kind_meals_subject">list of meals</string>
+    <string name="import_kind_meals_subject_indefinite">a list of meals</string>
+    <string name="import_kind_meal_plan_label">Meal plan</string>
+    <string name="import_kind_meal_plan_subject">meal plan</string>
+    <string name="import_kind_meal_plan_subject_indefinite">a meal plan</string>
+    <!-- %1$s subject, %2$s example CSV, %3$s rules text -->
+    <string name="import_ai_prompt">Take the %1$s we discussed earlier in this conversation and give it to me as a CSV file, in exactly the format below.\n\nFormat (keep the header row and the column names exactly as shown):\n\n%2$s\n\nRules:\n%3$s\n\nHow to answer:\n- Use the details we agreed on in our conversation. If something we didn\'t settle is needed (for example sets, reps or macros), choose a sensible value instead of asking me.\n- Put the whole CSV in one code block so I can copy it, or attach it as a .csv file if you can.\n- Reply with only the CSV: no explanations, no extra columns, no blank rows.</string>
+    <!-- %1$s subject with its article ("an exercise"), %2$s the problem lines, %3$s example CSV, %4$s rules text -->
+    <string name="import_error_report">I tried to import a CSV file as %1$s into my workout app and it failed with these errors:\n%2$s\nPlease fix the CSV and send the whole corrected file again, in exactly this format:\n\n%3$s\n\nRules:\n%4$s</string>
+    <string name="import_error_report_item">- %1$s\n</string>
+    <!-- Items already end in a newline; nothing goes between them. -->
+    <string name="import_error_report_item_separator"></string>
+    <string name="import_issue_with_line">Line %1$d: %2$s</string>
+    <!-- %1$d longest day name, %2$d most sets -->
+    <string name="import_rules_program">- One row per exercise. Rows of the same day go together, in training order; the first exercise of a day is its main lift.\n- day: name of the workout day (max %1$d characters).\n- sets: 1-%2$d. rep_min and rep_max: the target rep range (for type \"minutes\" it is minutes).\n- type: \"reps\" for weight x reps, \"minutes\" for cardio.\n- stat: STR (upper body), CON (legs), STA (cardio).\n- increment_kg: weight added when every set reaches rep_max (2.5 usually, 5 for big lower-body lifts, 0 for cardio).\n- Each exercise at most once per day.\n- superset: optional, usually empty. To do exercises as a superset (alternating one set of each), give them the same label (A, B, …). A superset\'s rows must be next to each other in the same day, and it needs at least 2 exercises.</string>
+    <!-- %1$d most sets -->
+    <string name="import_rules_exercises">- One row per exercise, in training order.\n- sets: 1-%1$d. rep_min and rep_max: the target rep range (for type \"minutes\" it is minutes).\n- type: \"reps\" for weight x reps, \"minutes\" for cardio.\n- stat: STR (upper body), CON (legs), STA (cardio).\n- increment_kg: weight added when every set reaches rep_max (2.5 usually, 5 for big lower-body lifts, 0 for cardio).\n- Each exercise at most once.\n- superset: optional, usually empty. To do exercises as a superset (alternating one set of each), give them the same label (A, B, …). A superset\'s rows must be next to each other, and it needs at least 2 exercises.</string>
+    <!-- %1$d longest meal name -->
+    <string name="import_rules_meals">- One row per meal (max %1$d characters in the name).\n- protein_g, carbs_g, fat_g, fiber_g: grams for ONE portion, numbers only (0-1000).\n- kcal: calories for one portion; leave empty to calculate it from the macros.\n- tags: optional, separated by | (for example breakfast|high-protein).\n- recipe_url and recipe: optional. Put text containing commas in double quotes.</string>
+    <!-- %1$d most rows -->
+    <string name="import_rules_meal_plan">- One row per meal of the day, in eating order (max %1$d rows).\n- slot: name of the slot (Breakfast, Lunch, ...). time: 24-hour HH:mm, optional.\n- protein_g, carbs_g, fat_g, fiber_g: grams for ONE portion, numbers only (0-1000).\n- kcal: calories for one portion; leave empty to calculate it from the macros.\n- tags: optional, separated by | (for example breakfast|high-protein).\n- The plan\'s daily targets are the sum of its meals.</string>
+    <string name="import_problem_file_too_large">The file is too large (max %1$d KB).</string>
+    <string name="import_problem_unclosed_quote">A quoted value is never closed (missing \").</string>
+    <string name="import_problem_empty_file">The file is empty.</string>
+    <string name="import_problem_header_missing">The first line must be the header row.</string>
+    <string name="import_problem_duplicate_column">Column \"%1$s\" appears twice in the header.</string>
+    <string name="import_problem_no_data_rows">The file has a header but no data rows.</string>
+    <string name="import_problem_too_many_rows">Too many rows (%1$d); the limit is %2$d.</string>
+    <string name="import_problem_missing_columns">Missing column(s): %1$s. The header row has: %2$s.</string>
+    <string name="import_problem_missing_columns_none">none</string>
+    <string name="import_problem_missing_rep_columns">Missing column(s): rep_min, rep_max.</string>
+    <string name="import_problem_day_empty">day is empty.</string>
+    <string name="import_problem_day_name_too_long">day \"%1$s\" is longer than %2$d characters.</string>
+    <string name="import_problem_duplicate_exercise_in_day">\"%1$s\" is already listed in day \"%2$s\" (line %3$d). Each exercise can appear only once per day.</string>
+    <string name="import_problem_duplicate_exercise">\"%1$s\" is already listed (line %2$d). Each exercise can appear only once per day.</string>
+    <string name="import_problem_too_many_days">Too many days (%1$d); the limit is %2$d.</string>
+    <string name="import_problem_wrong_day_count">Expected exactly %1$d workout day but found %2$d: %3$s.</string>
+    <string name="import_problem_day_too_long">Day \"%1$s\" has %2$d exercises; the limit is %3$d.</string>
+    <string name="import_problem_wrong_exercise_count">Expected exactly %1$d exercise but found %2$d.</string>
+    <string name="import_problem_superset_not_consecutive">Superset %1$s on line %2$d must follow line %3$d directly.</string>
+    <string name="import_problem_superset_too_small">Superset %1$s has only one exercise; a superset needs at least 2, or leave superset empty.</string>
+    <string name="import_problem_exercise_name_empty">exercise is empty.</string>
+    <string name="import_problem_exercise_name_too_long">exercise name is longer than %1$d characters.</string>
+    <string name="import_problem_bad_type">type \"%1$s\" must be \"reps\" or \"minutes\".</string>
+    <string name="import_problem_bad_stat">stat \"%1$s\" must be STR, CON or STA.</string>
+    <string name="import_problem_bad_sets">sets \"%1$s\" must be a whole number from 1 to %2$d.</string>
+    <string name="import_problem_bad_rep_numbers">rep_min \"%1$s\" and rep_max \"%2$s\" must be whole numbers.</string>
+    <string name="import_problem_bad_rep_range">rep range %1$d-%2$d must satisfy 1 &lt;= rep_min &lt;= rep_max &lt;= %3$d.</string>
+    <string name="import_problem_bad_increment">increment_kg \"%1$s\" must be a number from 0 to %2$d.</string>
+    <string name="import_problem_superset_label_too_long">superset label is longer than %1$d characters.</string>
+    <string name="import_problem_wrong_meal_count">Expected exactly %1$d meal but found %2$d rows.</string>
+    <string name="import_problem_too_many_meals">Too many meals (%1$d); a plan holds at most %2$d.</string>
+    <string name="import_problem_slot_empty">slot is empty.</string>
+    <string name="import_problem_slot_too_long">slot is longer than %1$d characters.</string>
+    <string name="import_problem_bad_time">time \"%1$s\" must be 24-hour HH:mm, e.g. 07:30.</string>
+    <string name="import_problem_meal_name_empty">meal name is empty.</string>
+    <string name="import_problem_meal_name_too_long">meal name is longer than %1$d characters.</string>
+    <string name="import_problem_grams_empty">%1$s is empty (use 0 if there is none).</string>
+    <string name="import_problem_bad_grams">%1$s \"%2$s\" must be a number from 0 to %3$d.</string>
+    <string name="import_problem_bad_kcal">kcal \"%1$s\" must be a number from 0 to %2$d, or empty.</string>
+    <string name="import_problem_bad_url">recipe_url \"%1$s\" is not a valid http(s) link.</string>
+    <string name="import_problem_couldnt_read">Couldn\'t read the file (%1$s).</string>
+    <string name="import_problem_import_failed">Import failed (%1$s).</string>
+    <!-- Page title per kind: a whole string each, because the article can\'t be derived from the subject in every language -->
+    <string name="import_title_program">Import a workout plan</string>
+    <string name="import_title_workout_day">Import a workout</string>
+    <string name="import_title_workout_days">Import a set of workouts</string>
+    <string name="import_title_exercise">Import an exercise</string>
+    <string name="import_title_exercises">Import a list of exercises</string>
+    <string name="import_title_meal">Import a meal</string>
+    <string name="import_title_meals">Import a list of meals</string>
+    <string name="import_title_meal_plan">Import a meal plan</string>
+    <string name="import_get_header">1. Get the CSV</string>
+    <string name="import_step_copy">Copy the prompt.</string>
+    <!-- %1$s is the kind\'s subject, e.g. "workout plan" -->
+    <string name="import_step_paste">Paste it into the AI chat where you made your %1$s.</string>
+    <string name="import_step_save">Save the answer as a .csv file, or copy the CSV text.</string>
+    <string name="import_copy_prompt">Copy prompt for your AI chat</string>
+    <string name="import_show_format">Show format</string>
+    <string name="import_hide_format">Hide format</string>
+    <string name="import_load_header">2. Load it</string>
+    <string name="import_choose_file">Choose file</string>
+    <string name="import_paste">Paste</string>
+    <!-- %1$s is the file name, or "Pasted text" -->
+    <string name="import_loaded">Loaded: %1$s</string>
+    <string name="import_pasted_text">Pasted text</string>
+    <string name="import_failed_title">Couldn\'t import</string>
+    <string name="import_copy_error">Copy error</string>
+    <string name="import_copy_error_hint">Paste it into the AI chat that made the file. It includes the expected format.</string>
+    <string name="import_preview_header">Preview</string>
+    <string name="import_importing">Importing…</string>
+    <string name="import_add_to_header">Add to</string>
+    <string name="import_new_program">New program</string>
+    <string name="import_add_to_day_header">Add to day</string>
+    <string name="import_plan_name">Plan name</string>
+    <string name="import_program_name">Program name</string>
+    <!-- Clipboard labels -->
+    <string name="import_clip_label_prompt">AI prompt</string>
+    <string name="import_clip_label_error">Import error</string>
+    <!-- %1$s is the kind\'s subject -->
+    <string name="import_prompt_copied">Prompt copied. Paste it into the AI chat where you made your %1$s.</string>
+    <string name="import_error_copied">Error copied. Paste it into the AI chat that made the CSV.</string>
+    <string name="import_no_file_picker">No file picker on this phone. Use Paste instead.</string>
+    <string name="import_clipboard_empty">The clipboard is empty. Copy the CSV text first.</string>
+    <string name="import_blocker_built_in_only">Built-in workouts can\'t be changed. Import a whole plan first, then add exercises to its days.</string>
+    <string name="import_blocker_pick_day">Pick the workout day to add to.</string>
+    <string name="import_blocker_name">Give it a name.</string>
+    <!-- Preview lines. %1$s name, %2$d sets, %3$s rep range -->
+    <string name="import_preview_exercise">%1$s \u2068%2$d×%3$s\u2069</string>
+    <!-- %1$s day name, %2$s its exercises -->
+    <string name="import_preview_day">%1$s: %2$s</string>
+    <!-- %1$s name, then protein, carbs and fat in grams (P, C, F are the macro initials) -->
+    <string name="import_preview_meal">%1$s · %2$dP %3$dC %4$dF</string>
+    <!-- %1$s time and/or label, %2$s meal name -->
+    <string name="import_preview_slot">%1$s · %2$s</string>
+    <!-- %1$s time of day, %2$s slot label -->
+    <string name="import_preview_slot_time_label">%1$s %2$s</string>
+    <!-- Messages shown on Programs / Plans after an import. The counted phrases come from the plurals below -->
+    <string name="import_done_program">Imported \"%1$s\" (%2$s). It\'s now your active program.</string>
+    <string name="import_done_days">Added %1$s</string>
+    <string name="import_done_exercises">Added %1$s</string>
+    <string name="import_done_plan">Imported plan \"%1$s\" · %2$s. Switch it on to use it.</string>
+    <string name="import_meals_summary_reused">%1$s, %2$s reused</string>
+    <plurals name="import_days_count">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="import_workout_days_count">
+        <item quantity="one">%1$d workout day</item>
+        <item quantity="other">%1$d workout days</item>
+    </plurals>
+    <plurals name="import_exercises_count">
+        <item quantity="one">%1$d exercise</item>
+        <item quantity="other">%1$d exercises</item>
+    </plurals>
+    <plurals name="import_new_meals_count">
+        <item quantity="one">%1$d new meal</item>
+        <item quantity="other">%1$d new meals</item>
+    </plurals>
+    <plurals name="import_existing_meals_count">
+        <item quantity="one">%1$d existing meal</item>
+        <item quantity="other">%1$d existing meals</item>
+    </plurals>
+    <string name="import_problem_cant_open_file">Couldn\'t open the file.</string>
+    <string name="import_problem_not_text_file">This isn\'t a CSV text file. Spreadsheets must be saved/exported as .csv first.</string>
+    <string name="import_problem_no_permission">No permission to read that file.</string>
+    <!-- Programs screen -->
+    <string name="programs_title">Programs</string>
+    <string name="programs_hint_rotation">Today rotates through the active program\'s days.</string>
+    <string name="programs_hint_history">Switching programs keeps your history and XP.</string>
+    <string name="programs_share_failed">No app can receive the plan.</string>
+    <string name="programs_empty">No programs. Import one, or restore the built-in split.</string>
+    <string name="programs_restore_built_in">Restore the built-in split</string>
+    <!-- %1$s is the program name -->
+    <string name="programs_delete_title">Delete %1$s?</string>
+    <string name="programs_delete_text_built_in">Finished workouts stay in your log. You can restore the built-in split later.</string>
+    <string name="programs_delete_text">Finished workouts stay in your log.</string>
+    <string name="programs_active">Active</string>
+    <string name="programs_make_active">Make active</string>
+    <string name="programs_update_failed">Couldn\'t update the program</string>
+    <!-- Sets and rep range after an exercise name, set in a muted colour; two leading spaces. %1$d sets, %2$s range, %3$s unit -->
+    <string name="programs_exercise_sets_reps">"  \u2068%1$d×%2$s\u2069"</string>
+    <string name="programs_exercise_sets_minutes">"  \u2068%1$d×%2$s\u2069 %3$s"</string>
+    <!-- Why a program change was refused -->
+    <string name="program_problem_program_gone">That program no longer exists</string>
+    <string name="program_problem_day_gone">That workout day no longer exists</string>
+    <string name="program_problem_built_in_read_only">Built-in workouts can\'t be changed</string>
+    <!-- %1$s is a list of exercise names -->
+    <string name="program_problem_already_in_day">Already in this day: %1$s</string>
+    <string name="program_problem_restore_built_in_first">Restore the built-in program first</string>
+    <string name="program_problem_workout_in_progress">Finish the workout in progress from this program first</string>
+</resources>

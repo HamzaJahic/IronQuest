@@ -1,0 +1,15 @@
+I tried to import a CSV file as a meal into my workout app and it failed with these errors:
+- Line 3: sets "x" must be a whole number from 1 to 20.
+- The file is empty.
+
+Please fix the CSV and send the whole corrected file again, in exactly this format:
+
+meal,protein_g,carbs_g,fat_g,fiber_g,kcal,tags,recipe_url,recipe
+Chicken Rice Bowl,45,60,12,4,520,lunch|high-protein,,"Grill the chicken, cook the rice, combine."
+
+Rules:
+- One row per meal (max 80 characters in the name).
+- protein_g, carbs_g, fat_g, fiber_g: grams for ONE portion, numbers only (0-1000).
+- kcal: calories for one portion; leave empty to calculate it from the macros.
+- tags: optional, separated by | (for example breakfast|high-protein).
+- recipe_url and recipe: optional. Put text containing commas in double quotes.

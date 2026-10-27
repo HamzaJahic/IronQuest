@@ -1,0 +1,17 @@
+I tried to import a CSV file as an exercise into my workout app and it failed with these errors:
+- Line 3: sets "x" must be a whole number from 1 to 20.
+- The file is empty.
+
+Please fix the CSV and send the whole corrected file again, in exactly this format:
+
+exercise,sets,rep_min,rep_max,type,stat,increment_kg,superset
+Incline Dumbbell Press,3,8,12,reps,STR,2.5,
+
+Rules:
+- One row per exercise, in training order.
+- sets: 1-20. rep_min and rep_max: the target rep range (for type "minutes" it is minutes).
+- type: "reps" for weight x reps, "minutes" for cardio.
+- stat: STR (upper body), CON (legs), STA (cardio).
+- increment_kg: weight added when every set reaches rep_max (2.5 usually, 5 for big lower-body lifts, 0 for cardio).
+- Each exercise at most once.
+- superset: optional, usually empty. To do exercises as a superset (alternating one set of each), give them the same label (A, B, …). A superset's rows must be next to each other, and it needs at least 2 exercises.

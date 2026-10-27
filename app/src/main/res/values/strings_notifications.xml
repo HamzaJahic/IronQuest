@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_action_mark_eaten">Mark eaten</string>
+    <string name="notification_action_taken">Taken</string>
+    <string name="notification_supplement_body">Tap Taken to check it off</string>
+    <!-- %1$s slot label, %2$d minutes before the meal -->
+    <string name="notification_slot_title">%1$s in %2$d min</string>
+    <!-- %1$s meal name, %2$d protein, %3$d carbs, %4$d fat (grams) -->
+    <string name="notification_slot_body">%1$s · P%2$d C%3$d F%4$d</string>
+    <string name="notification_supplement_title">Time for %1$s</string>
+    <!-- %1$s supplement name, %2$s its dose -->
+    <string name="notification_supplement_title_dose">Time for %1$s (%2$s)</string>
+    <!-- Workout goal reminder title; %1$s is the day name (Upper 1). -->
+    <string name="notification_goal_workout_title">Today: %1$s</string>
+    <!-- Notification channel names and descriptions, shown in the system notification settings. -->
+    <string name="notification_channel_goals_name">Goals</string>
+    <string name="notification_channel_goals_description">Today\'s workout goals and food targets</string>
+    <string name="notification_channel_meals_name">Meal reminders</string>
+    <string name="notification_channel_meals_description">Reminders for planned meals and supplements</string>
+</resources>

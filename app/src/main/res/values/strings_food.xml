@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="food_macro_protein">Protein</string>
+    <string name="food_macro_carbs">Carbs</string>
+    <string name="food_macro_fat">Fat</string>
+    <string name="food_macro_fiber">Fiber</string>
+    <string name="food_macro_calories">Calories</string>
+    <string name="food_macro_protein_short">P</string>
+    <string name="food_macro_carbs_short">C</string>
+    <string name="food_macro_fat_short">F</string>
+    <string name="food_macro_fiber_short">FIB</string>
+    <string name="food_macro_calories_short">KCAL</string>
+    <string name="food_mark_on_target">on target</string>
+    <string name="food_mark_under">under</string>
+    <string name="food_mark_over">over</string>
+    <string name="food_mark_no_target">no target</string>
+    <string name="food_mark_no_log">no log</string>
+    <!-- Shared amounts: %1$s is an already formatted number -->
+    <string name="food_amount_kcal">%1$s kcal</string>
+    <string name="food_amount_ml">%1$s ml</string>
+    <string name="food_amount_litres">%1$s L</string>
+    <!-- %1$s eaten, %2$s target, %3$s unit -->
+    <string name="food_progress_of_target">%1$s / %2$s %3$s</string>
+    <string name="food_progress_eaten">%1$s %2$s</string>
+    <!-- %1$s protein, %2$s carbs, %3$s fat: dense macro line for lists -->
+    <string name="food_macro_line">P%1$s C%2$s F%3$s</string>
+    <!-- Spelled out for the meal lists: grams of protein, carbs, fat -->
+    <string name="food_macro_words">%1$s g protein · %2$s g carbs · %3$s g fat</string>
+    <!-- Plan targets summary parts -->
+    <string name="food_summary_protein">P%1$s</string>
+    <string name="food_summary_carbs">C%1$s</string>
+    <string name="food_summary_fat">F%1$s</string>
+    <string name="food_summary_fiber">Fib%1$s</string>
+    <string name="food_no_targets">No targets</string>
+    <!-- Week average: protein, carbs, fat, fiber (grams), calories -->
+    <string name="food_average_line">P %1$s · C %2$s · F %3$s · Fib %4$s · %5$s kcal</string>
+    <!-- %1$s is a decimal portion ("1.5") -->
+    <string name="food_portion_value">%1$s×</string>
+    <plurals name="food_day_count">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <!-- "3 of 5 days": %1$d is the first count, the plural follows %2$d -->
+    <plurals name="food_of_days_count">
+        <item quantity="one">%1$d of %2$d day</item>
+        <item quantity="other">%1$d of %2$d days</item>
+    </plurals>
+    <plurals name="food_of_logged_days_count">
+        <item quantity="one">%1$d of %2$d logged day</item>
+        <item quantity="other">%1$d of %2$d logged days</item>
+    </plurals>
+
+    <!-- Messages shared by the meal screens (delete outcome) -->
+    <string name="food_meal_deleted">Meal deleted</string>
+    <string name="food_meal_archived">Meal archived. A plan still uses it.</string>
+
+    <!-- Date patterns (java.time). Fixed English order on purpose; a translation may supply its own. -->
+    <string name="food_date_long_pattern" translatable="false">EEEE, d MMMM</string>
+    <string name="food_date_cd_pattern" translatable="false">EEEE d MMMM</string>
+    <string name="food_week_start_pattern" translatable="false">d MMM</string>
+    <string name="food_week_end_pattern" translatable="false">d MMM yyyy</string>
+    <!-- %1$s is the first day of the week, %2$s the last -->
+    <string name="food_week_range">%1$s – %2$s</string>
+
+    <string name="food_title">Food</string>
+    <string name="food_header_meals">Meals</string>
+    <string name="food_header_plans">Plans</string>
+    <string name="food_mode_day">Day</string>
+    <string name="food_mode_week">Week</string>
+    <string name="food_mode_month">Month</string>
+    <string name="food_water">Water</string>
+
+    <!-- Day view -->
+    <!-- %1$s is the date, e.g. "Tuesday, 13 October" -->
+    <string name="food_day_today_label">Today · %1$s</string>
+    <string name="food_day_showing_today_plan">Showing today\'s plan</string>
+    <string name="food_day_meals_header">Meals</string>
+    <string name="food_day_no_plan">No active plan. Pick one under Plans for a checklist and targets.</string>
+    <string name="food_day_open_plans_cd">Open plans</string>
+    <string name="food_day_log_other_link">+ Log something else</string>
+    <string name="food_day_earlier_plan_header">Earlier plan</string>
+    <string name="food_day_supplements_header">Supplements</string>
+    <string name="food_day_add_supplement_link">+ Add supplement</string>
+    <!-- %1$s is the supplement name -->
+    <string name="food_day_delete_supplement_title">Delete %1$s?</string>
+    <string name="food_day_delete_supplement_text">If you\'ve taken it before, it\'s archived so your history stays.</string>
+    <!-- Macro lines under the protein bar: %1$s is an amount like "12 / 40 g" -->
+    <string name="food_day_carbs_line">Carbs %1$s</string>
+    <string name="food_day_fat_line">Fat %1$s</string>
+    <string name="food_day_fiber_line">Fiber %1$s</string>
+    <!-- Spoken description of a planned meal: %1$s slot label, %2$s meal name -->
+    <string name="food_day_slot_cd">%1$s: %2$s</string>
+    <!-- %1$s slot label, %2$s meal name, %3$d minutes before the meal -->
+    <plurals name="food_day_slot_reminder_cd">
+        <item quantity="one">%1$s: %2$s, reminder %3$d minute before</item>
+        <item quantity="other">%1$s: %2$s, reminder %3$d minutes before</item>
+    </plurals>
+    <string name="food_day_open_meal_cd">Open meal</string>
+    <!-- Small line above a meal name: %1$d is minutes -->
+    <string name="food_day_slot_reminder_line">reminder %1$d min before</string>
+    <!-- %1$s is a portion like "1.5×" -->
+    <string name="food_day_portion_change_cd">Portion %1$s, change</string>
+    <string name="food_day_extra_label">Extra</string>
+    <!-- %1$s is the meal name -->
+    <string name="food_day_remove_log_cd">Remove %1$s</string>
+    <string name="food_day_water_remove_cd">Remove 250 ml</string>
+    <string name="food_day_water_add_cd">Add 250 ml</string>
+    <!-- %1$s is the water target, formatted -->
+    <string name="food_day_water_target">of %1$s</string>
+    <!-- %1$s is the supplement name -->
+    <string name="food_day_edit_supplement_cd">Edit %1$s</string>
+    <!-- %1$s is a time of day -->
+    <string name="food_day_supplement_reminder">reminder %1$s</string>
+
+    <!-- Dialogs and the meal picker -->
+    <string name="food_day_picker_confirm">Show day</string>
+    <string name="food_supplement_new_title">New supplement</string>
+    <string name="food_supplement_edit_title">Edit supplement</string>
+    <string name="food_supplement_name_hint">Name</string>
+    <string name="food_supplement_dose_hint">Dose (e.g. 5 g)</string>
+    <!-- %1$s is a time of day -->
+    <string name="food_supplement_remind_at">Remind at %1$s</string>
+    <string name="food_supplement_add_reminder">Add reminder</string>
+    <string name="food_supplement_clear_reminder">Clear</string>
+    <string name="food_supplement_delete">Delete supplement</string>
+    <string name="food_portion_title">Portion</string>
+    <string name="food_portion_custom_hint">Custom (0.25–5)</string>
+    <string name="food_picker_title">Log something else</string>
+    <string name="food_picker_search_hint">Search meals or tags</string>
+    <string name="food_picker_empty_library">No meals yet. Add one under Meals.</string>
+    <string name="food_picker_no_match">No meals match.</string>
+
+    <!-- Week -->
+    <string name="food_week_tap_hint">Tap a bar to open that day.</string>
+    <!-- %1$s is the target, %2$s the unit -->
+    <string name="food_week_target">Target %1$s %2$s</string>
+    <!-- %1$s is the lower-case macro name, e.g. "protein" -->
+    <string name="food_week_no_target">No %1$s target</string>
+    <string name="food_week_average_header">Week average</string>
+    <string name="food_week_nothing_logged">Nothing logged this week</string>
+    <!-- %1$s is the lower-case macro name -->
+    <string name="food_week_on_target">On target (%1$s)</string>
+    <!-- Spoken description of a bar: %1$s date -->
+    <string name="food_cell_upcoming_cd">%1$s, upcoming</string>
+    <!-- %1$s date, %2$s value, %3$s unit, %4$s mark such as "on target" -->
+    <string name="food_week_bar_cd">%1$s: %2$s %3$s, %4$s</string>
+
+    <!-- Month -->
+    <string name="food_month_hint">Coloured by protein. Tap a day to open it.</string>
+    <string name="food_month_summary_header">This month</string>
+    <string name="food_month_on_target">On target</string>
+    <!-- Spoken description of a day cell: %1$s date, %2$s mark such as "under" -->
+    <string name="food_month_cell_cd">%1$s, %2$s</string>
+
+    <!-- Snackbar messages -->
+    <string name="food_day_portion_range">Portion must be between 0.25× and 5×</string>
+    <string name="food_day_supplement_name_required">Give the supplement a name</string>
+    <string name="food_day_reminder_invalid">Reminder time is invalid</string>
+    <!-- %1$s is the system error message -->
+    <string name="food_day_save_failed">Couldn\'t save: %1$s</string>
+    <string name="food_day_save_failed_unknown">Couldn\'t save: unknown error</string>
+
+    <!-- Shared by the Meal and Plan editors -->
+    <string name="food_field_name">Name</string>
+    <string name="food_field_protein_g">Protein g</string>
+    <string name="food_field_carbs_g">Carbs g</string>
+    <string name="food_field_fat_g">Fat g</string>
+    <string name="food_field_fiber_g">Fiber g</string>
+    <string name="food_field_kcal">kcal</string>
+    <string name="food_field_kcal_optional">kcal (optional)</string>
+    <string name="food_field_water_ml">Water ml</string>
+    <string name="food_error_required">Required</string>
+    <string name="food_error_invalid">Invalid</string>
+    <string name="food_error_grams_range">0–1000</string>
+    <string name="food_error_kcal_range">0–10000</string>
+    <!-- %1$s is a formatted number of grams -->
+    <string name="food_amount_g">%1$s g</string>
+
+    <!-- Meal library -->
+    <string name="food_meal_archived_label">Archived</string>
+    <string name="food_library_empty_archived">No archived meals.</string>
+    <string name="food_library_empty">No meals yet. Tap New to add one.</string>
+    <!-- Between the macros and the tags of a meal row -->
+    <string name="food_library_row_separator">"  ·  "</string>
+
+    <!-- Meal detail -->
+    <string name="food_meal_detail_missing">This meal no longer exists.</string>
+    <string name="food_meal_detail_archived_text">Hidden from the library and pickers. Your log is unchanged.</string>
+    <string name="food_meal_detail_restore">Restore</string>
+    <!-- %1$s fibre grams, %2$s kcal -->
+    <string name="food_meal_detail_fiber_kcal">Fiber %1$s g · %2$s kcal</string>
+    <string name="food_meal_detail_fiber_kcal_derived">Fiber %1$s g · %2$s kcal (from P/C/F)</string>
+    <string name="food_meal_detail_used_in">Used in</string>
+    <string name="food_meal_detail_recipe">Recipe</string>
+    <string name="food_meal_detail_recipe_link">Recipe link</string>
+    <string name="food_meal_detail_open_link_cd">Open recipe link</string>
+    <string name="food_meal_detail_log_today">Log for today</string>
+    <string name="food_meal_logged">Logged for today</string>
+    <string name="food_meal_restored">Meal restored</string>
+    <!-- %1$s is the system error message, or "unknown error" -->
+    <string name="food_meal_log_failed">Couldn\'t log meal: %1$s</string>
+    <string name="food_meal_restore_failed">Couldn\'t restore meal: %1$s</string>
+
+    <!-- Meal editor -->
+    <string name="food_meal_editor_title_new">New meal</string>
+    <string name="food_meal_editor_title_edit">Edit meal</string>
+    <string name="food_meal_editor_tags">Tags, comma separated</string>
+    <string name="food_meal_editor_recipe">Recipe (optional)</string>
+    <string name="food_meal_editor_recipe_link">Recipe link (optional)</string>
+    <string name="food_meal_editor_link_error">Not a valid web link</string>
+    <string name="food_meal_editor_estimate">Estimate from ingredients</string>
+    <string name="food_meal_editor_save">Save meal</string>
+    <string name="food_meal_editor_delete">Delete meal</string>
+    <string name="food_meal_editor_delete_title">Delete meal?</string>
+    <string name="food_meal_editor_delete_text">If a plan uses it, it\'s archived instead so the plan keeps working. Your log stays as it is.</string>
+    <!-- %1$s is the whole number of kcal derived from the macros; shown as the empty kcal field\'s hint -->
+    <string name="food_meal_editor_kcal_hint">≈ %1$s</string>
+    <!-- %1$s is the system error message, or "unknown error" -->
+    <string name="food_meal_save_failed">Couldn\'t save meal: %1$s</string>
+    <string name="food_meal_delete_failed">Couldn\'t delete meal: %1$s</string>
+
+    <!-- Plans -->
+    <string name="food_plans_title">Meal plans</string>
+    <string name="food_plans_empty">No plans yet. Tap New to make one.</string>
+    <!-- %1$s is the plan name -->
+    <string name="food_plans_delete_title">Delete %1$s?</string>
+    <string name="food_plans_delete_text">Meals you already logged from it stay in your log.</string>
+    <string name="food_plans_share_failed">Couldn\'t share the plan.</string>
+    <string name="food_plan_active">Active</string>
+    <plurals name="food_plan_meal_count">
+        <item quantity="one">%1$d meal</item>
+        <item quantity="other">%1$d meals</item>
+    </plurals>
+    <!-- Spoken label of the on/off switch: %1$s is the plan name -->
+    <string name="food_plan_active_switch_cd">Active plan %1$s</string>
+    <!-- %1$s is the system error message, or "unknown error" -->
+    <string name="food_plan_update_failed">Couldn\'t update plan: %1$s</string>
+    <!-- Name of a duplicated plan: %1$s is the original name -->
+    <string name="food_plan_copy_name">%1$s (copy)</string>
+
+    <!-- Plan editor -->
+    <string name="food_plan_editor_title_new">New plan</string>
+    <string name="food_plan_editor_title_edit">Edit plan</string>
+    <string name="food_plan_editor_name">Plan name</string>
+    <string name="food_plan_editor_targets_header">Daily targets (optional)</string>
+    <string name="food_plan_editor_meals_header">Meals</string>
+    <string name="food_plan_editor_add_meal">+ Add meal</string>
+    <string name="food_plan_editor_save">Save plan</string>
+    <string name="food_plan_editor_label">Label</string>
+    <string name="food_plan_editor_move_up_cd">Move up</string>
+    <string name="food_plan_editor_move_down_cd">Move down</string>
+    <string name="food_plan_editor_remove_meal_cd">Remove meal</string>
+    <string name="food_plan_editor_choose_meal">Choose meal…</string>
+    <string name="food_plan_editor_set_time">Set time (optional)</string>
+    <string name="food_plan_editor_slot_error">Needs a label and a meal</string>
+    <string name="food_plan_editor_reminder_needs_time">Set a time to add a reminder</string>
+    <plurals name="food_plan_editor_reminder_cd">
+        <item quantity="one">reminder %1$d minute before</item>
+        <item quantity="other">reminder %1$d minutes before</item>
+    </plurals>
+    <string name="food_plan_editor_no_reminder_cd">no reminder</string>
+    <string name="food_plan_reminder_off">Reminder off</string>
+    <!-- %1$d is minutes before the meal -->
+    <string name="food_plan_reminder_before">Remind %1$d min before</string>
+    <!-- Default names of the first four new meal slots, then "Meal 5", "Meal 6", … -->
+    <string name="food_plan_slot_default_1">Breakfast</string>
+    <string name="food_plan_slot_default_2">Lunch</string>
+    <string name="food_plan_slot_default_3">Snack</string>
+    <string name="food_plan_slot_default_4">Dinner</string>
+    <string name="food_plan_slot_default_n">Meal %1$d</string>
+    <!-- %1$s is the system error message, or "unknown error" -->
+    <string name="food_plan_save_failed">Couldn\'t save plan: %1$s</string>
+
+    <!-- Ingredient calculator sheet -->
+    <string name="food_calc_title">Estimate from ingredients</string>
+    <string name="food_calc_intro">Add foods with an amount to estimate the macros. A rough estimate; you can still edit the fields.</string>
+    <string name="food_calc_search_label">Search foods</string>
+    <string name="food_calc_search_placeholder">e.g. chicken breast</string>
+    <string name="food_calc_ingredients_header">Ingredients</string>
+    <string name="food_calc_apply">Apply to meal</string>
+    <string name="food_calc_hint_idle">Search your foods, the built-in list and Open Food Facts.</string>
+    <string name="food_calc_searching_cd">Searching foods</string>
+    <string name="food_calc_no_matches">No matches. Try a simpler word, e.g. \"rice\".</string>
+    <string name="food_calc_lookup_unavailable">Online search unavailable.</string>
+    <string name="food_calc_retry">Retry</string>
+    <string name="food_calc_error_offline">No connection. Built-in foods still work.</string>
+    <string name="food_calc_error_rate_limited">Online search is busy, try again in a minute.</string>
+    <string name="food_calc_error_server">Open Food Facts had a problem. Try again later.</string>
+    <string name="food_calc_error_bad_response">Open Food Facts sent an unexpected response.</string>
+    <!-- %1$s macro line, %2$s fibre grams, %3$s whole kcal -->
+    <string name="food_calc_row_macros">%1$s FIB%2$s · %3$s kcal</string>
+    <string name="food_calc_row_invalid">Enter a valid amount</string>
+    <!-- %1$s is the food name -->
+    <string name="food_calc_amount_cd">Amount of %1$s</string>
+    <string name="food_calc_remove_cd">Remove %1$s</string>
+    <!-- %1$s macro line, %2$s fibre grams, %3$s whole kcal -->
+    <string name="food_calc_total">Total  %1$s FIB%2$s · ≈ %3$s kcal</string>
+    <string name="food_calc_total_invalid">Fix the amounts above to see the total.</string>
+    <string name="food_calc_over_limit">Over the editor\'s limit. Saving will reject these values.</string>
+
+    <!-- Reminder permission hints -->
+    <string name="food_hint_notifications_off">Notifications are off, so reminders won\'t show</string>
+    <string name="food_hint_notifications_action">Settings</string>
+    <string name="food_hint_exact_alarms">Reminders may be late. Allow exact alarms.</string>
+    <string name="food_hint_exact_alarms_action">Allow</string>
+
+    <!-- Meal builder -->
+    <string name="food_builder_title_new">Log food</string>
+    <string name="food_builder_title_edit">Edit meal</string>
+    <string name="food_builder_done">Done</string>
+    <string name="food_builder_search_label">Search food</string>
+    <string name="food_builder_search_placeholder">e.g. eggs, rice, skyr</string>
+    <string name="food_builder_recent_meals">Recent meals</string>
+    <string name="food_builder_recent_foods">Recent foods</string>
+    <string name="food_builder_your_meals">Your meals</string>
+    <string name="food_builder_foods">Foods</string>
+    <string name="food_builder_no_matches">Nothing found.</string>
+    <string name="food_builder_online">Online</string>
+    <string name="food_builder_online_loading">Searching online…</string>
+    <string name="food_builder_search_online">Search online</string>
+    <string name="food_builder_online_unavailable">Online search unavailable.</string>
+    <string name="food_builder_online_busy">Online search is busy, try again in a minute.</string>
+    <string name="food_builder_online_attribution">From Open Food Facts</string>
+    <string name="food_builder_create">+ Create \"%1$s\"</string>
+    <string name="food_builder_add">Add</string>
+    <string name="food_builder_amount_label">Amount</string>
+    <string name="food_builder_amount_invalid">Enter an amount up to %1$s.</string>
+    <string name="food_builder_save_as_meal">Save as a meal</string>
+    <string name="food_builder_saved_as_meal">Saved to your meals</string>
+    <string name="food_builder_empty">Add the foods you ate.</string>
+    <string name="food_builder_remove_cd">Remove %1$s</string>
+    <string name="food_builder_name_cd">Meal name, %1$s. Tap to change</string>
+    <string name="food_builder_name_custom">Other name…</string>
+    <string name="food_builder_name_dialog_title">Meal name</string>
+    <string name="food_builder_meal_breakfast">Breakfast</string>
+    <string name="food_builder_meal_lunch">Lunch</string>
+    <string name="food_builder_meal_dinner">Dinner</string>
+    <string name="food_builder_meal_snack">Snack</string>
+    <string name="food_builder_item_line">\u2068%1$s %2$s\u2069</string>
+    <string name="food_builder_per_100g">per 100 g: %1$s kcal</string>
+    <string name="food_builder_macro_preview">%1$s kcal · P %2$s · C %3$s · F %4$s</string>
+    <plurals name="food_builder_foods_count">
+        <item quantity="one">%d food</item>
+        <item quantity="other">%d foods</item>
+    </plurals>
+    <string name="food_day_set_targets_link">Set daily targets</string>
+    <string name="food_day_tracking_link">Tracking: %1$s ›</string>
+    <string name="food_day_log_food_link">+ Log food</string>
+    <string name="food_day_quick_meal_line">%1$s · %2$s</string>
+    <string name="food_unit_g">g</string>
+    <string name="food_unit_ml">ml</string>
+    <string name="food_unit_pcs">pcs</string>
+    <string name="food_unit_serving">serving</string>
+    <string name="food_unit_portion">×</string>
+
+    <string name="food_your_foods_label">Your foods</string>
+    <string name="food_your_foods_empty">No foods of your own yet. Create one while logging food.</string>
+    <string name="food_your_foods_no_match">No foods match.</string>
+    <string name="food_your_foods_per_100g">per 100 g</string>
+    <string name="food_your_foods_online">Online</string>
+    <string name="food_your_foods_delete_title">Delete %1$s?</string>
+    <string name="food_your_foods_delete_body">Past meals keep it.</string>
+    <string name="food_custom_food_title_new">New food</string>
+    <string name="food_custom_food_title_edit">Edit food</string>
+    <string name="food_custom_food_per_100g">Per 100 g</string>
+    <string name="food_custom_food_per_piece">Per piece</string>
+    <string name="food_custom_food_piece_grams">Weight of one piece (g)</string>
+    <string name="food_custom_food_piece_grams_optional">Weight of one piece (optional)</string>
+    <string name="food_custom_food_piece_grams_error">1–1000</string>
+    <string name="food_custom_food_save_failed">Couldn\'t save the food: %1$s</string>
+    <string name="food_targets_title">Daily targets</string>
+    <string name="food_targets_hint">Optional. They colour your days and earn bonus XP.</string>
+    <string name="food_targets_kcal">Calories (kcal)</string>
+    <string name="food_targets_water">Water (ml)</string>
+    <string name="food_targets_error">Check the numbers.</string>
+</resources>

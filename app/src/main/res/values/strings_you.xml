@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stat_constitution">Constitution</string>
+    <string name="stat_strength">Strength</string>
+    <string name="stat_stamina">Stamina</string>
+    <!-- Backup problems. you_backup_error_* is shown when a file is checked, you_backup_failed_* when loading it failed (same text + "Nothing was changed."). -->
+    <string name="you_backup_error_not_a_backup">This file isn\'t an IronQuest backup.</string>
+    <string name="you_backup_error_not_valid">This isn\'t a valid IronQuest backup.</string>
+    <string name="you_backup_error_no_version">This backup has no version number.</string>
+    <string name="you_backup_error_no_data">This backup is incomplete (no data).</string>
+    <string name="you_backup_error_damaged">This backup is damaged (%1$s).</string>
+    <string name="you_backup_error_newer_version">This backup was made by a newer version of IronQuest. Update the app, then load it again.</string>
+    <string name="you_backup_error_too_old">This backup is too old to read (version %1$d).</string>
+    <string name="you_backup_error_incomplete">This backup is incomplete (missing %1$s).</string>
+    <string name="you_backup_error_inconsistent">This backup is inconsistent (%1$s points at something that isn\'t in it).</string>
+    <string name="you_backup_error_row_not_stored">A row of %1$s couldn\'t be stored.</string>
+    <string name="you_backup_error_does_not_fit">This backup doesn\'t fit the app\'s data (%1$s).</string>
+    <string name="you_backup_error_does_not_fit_plain">This backup doesn\'t fit the app\'s data.</string>
+    <string name="you_backup_error_unreadable">Couldn\'t load the backup (%1$s).</string>
+    <string name="you_backup_failed_not_a_backup">This file isn\'t an IronQuest backup. Nothing was changed.</string>
+    <string name="you_backup_failed_not_valid">This isn\'t a valid IronQuest backup. Nothing was changed.</string>
+    <string name="you_backup_failed_no_version">This backup has no version number. Nothing was changed.</string>
+    <string name="you_backup_failed_no_data">This backup is incomplete (no data). Nothing was changed.</string>
+    <string name="you_backup_failed_damaged">This backup is damaged (%1$s). Nothing was changed.</string>
+    <string name="you_backup_failed_newer_version">This backup was made by a newer version of IronQuest. Update the app, then load it again. Nothing was changed.</string>
+    <string name="you_backup_failed_too_old">This backup is too old to read (version %1$d). Nothing was changed.</string>
+    <string name="you_backup_failed_incomplete">This backup is incomplete (missing %1$s). Nothing was changed.</string>
+    <string name="you_backup_failed_inconsistent">This backup is inconsistent (%1$s points at something that isn\'t in it). Nothing was changed.</string>
+    <string name="you_backup_failed_row_not_stored">A row of %1$s couldn\'t be stored. Nothing was changed.</string>
+    <string name="you_backup_failed_does_not_fit">This backup doesn\'t fit the app\'s data (%1$s). Nothing was changed.</string>
+    <string name="you_backup_failed_does_not_fit_plain">This backup doesn\'t fit the app\'s data. Nothing was changed.</string>
+    <string name="you_backup_failed_unreadable">Couldn\'t load the backup (%1$s). Nothing was changed.</string>
+    <!-- %1$s is a date such as 2026-10-12 -->
+    <string name="you_backup_preview_title">Import this data?</string>
+    <string name="you_backup_preview_confirm">Import</string>
+    <string name="you_backup_preview_from">Backup from %1$s:</string>
+    <plurals name="you_backup_workouts_count">
+        <item quantity="one">%1$d workout</item>
+        <item quantity="other">%1$d workouts</item>
+    </plurals>
+    <plurals name="you_backup_logged_meals_count">
+        <item quantity="one">%1$d logged meal</item>
+        <item quantity="other">%1$d logged meals</item>
+    </plurals>
+    <plurals name="you_backup_meals_count">
+        <item quantity="one">%1$d meal</item>
+        <item quantity="other">%1$d meals</item>
+    </plurals>
+    <plurals name="you_backup_meal_plans_count">
+        <item quantity="one">%1$d meal plan</item>
+        <item quantity="other">%1$d meal plans</item>
+    </plurals>
+    <plurals name="you_backup_programs_count">
+        <item quantity="one">%1$d imported program</item>
+        <item quantity="other">%1$d imported programs</item>
+    </plurals>
+    <!-- The three library counts (meals, meal plans, programs), each already a plural -->
+    <string name="you_backup_preview_library">%1$s, %2$s, %3$s</string>
+    <string name="you_backup_preview_warning">Everything currently in the app is replaced.</string>
+    <string name="you_backup_importing_title">Importing…</string>
+    <string name="you_backup_importing_wait">Wait</string>
+    <string name="you_backup_message_title">Backup</string>
+    <string name="you_backup_message_ok">OK</string>
+    <string name="you_backup_imported">Data imported.</string>
+    <string name="you_backup_exported">Data exported.</string>
+    <string name="you_backup_save_failed">Couldn\'t save the file.</string>
+    <string name="you_backup_create_failed">Couldn\'t create the backup.</string>
+    <string name="you_backup_open_failed">Couldn\'t open the file.</string>
+    <string name="you_backup_too_large">The file is too large to be a backup.</string>
+    <!-- %1$s is an exception class name -->
+    <string name="you_backup_read_failed">Couldn\'t read the file (%1$s).</string>
+    <string name="you_title">You</string>
+    <string name="you_plans_title">Plans</string>
+    <string name="you_goals_title">Goals</string>
+    <string name="you_appearance_title">Appearance</string>
+    <string name="you_backup_title">Export &amp; import</string>
+    <string name="you_data_title">Your data</string>
+    <string name="you_program">Program</string>
+    <string name="you_meal_plan">Meal plan</string>
+    <string name="you_none_active">None active</string>
+    <string name="you_food_tracking">Food tracking</string>
+    <string name="you_food_targets">Daily targets</string>
+    <string name="you_food_targets_not_set">Not set</string>
+    <string name="you_food_targets_kcal">%1$s kcal</string>
+    <string name="you_food_targets_protein">%1$s g protein</string>
+    <string name="you_appearance_style">Style</string>
+    <!-- %1$s is the name of the chosen palette -->
+    <string name="you_appearance_palette">Palette · %1$s</string>
+    <string name="you_appearance_mode">Mode</string>
+    <string name="you_tips_show_again">Show tips again</string>
+    <string name="you_tips_reset_done">Tips will show again</string>
+    <string name="you_style_diary">Diary</string>
+    <string name="you_style_bold">Bold</string>
+    <string name="you_style_soft">Soft</string>
+    <string name="you_palette_field_notes">Field notes</string>
+    <string name="you_palette_highlighter">Highlighter</string>
+    <string name="you_palette_plum">Plum</string>
+    <string name="you_palette_chalkboard">Chalkboard</string>
+    <string name="you_palette_steel">Steel</string>
+    <string name="you_mode_light">Light</string>
+    <string name="you_mode_dark">Dark</string>
+    <string name="you_mode_system">System</string>
+    <string name="you_goal_switch_show">Show on Today</string>
+    <string name="you_goal_switch_celebrate">Celebrate</string>
+    <string name="you_goal_switch_notify">Notify me</string>
+    <string name="you_goal_reminder_workout">Workout goals</string>
+    <string name="you_goal_reminder_food">Food goals</string>
+    <string name="you_goals_notification_times">Notification times</string>
+    <!-- %1$d level, %2$s total XP with grouping, %3$s the workout count as plural text -->
+    <string name="you_level_summary">Level %1$d · %2$s XP · %3$s</string>
+    <plurals name="you_workouts_count">
+        <item quantity="one">%1$d workout</item>
+        <item quantity="other">%1$d workouts</item>
+    </plurals>
+    <string name="you_stats_title">Stats</string>
+    <!-- Short for Level, in a stat row -->
+    <string name="you_stat_level">Lv %1$d</string>
+    <string name="you_backup_hint_export">Export saves your workouts, level and XP, meals, plans, programs and supplements to a file.</string>
+    <string name="you_backup_hint_import">Import replaces what is in the app with the contents of such a file.</string>
+    <string name="you_backup_hint_drive">Pick Google Drive in the file picker to keep the file online.</string>
+    <string name="you_backup_export">Export data</string>
+    <string name="you_backup_import">Import data</string>
+    <string name="you_backup_date_pattern" translatable="false">yyyy-MM-dd</string>
+    <string name="you_wipe_row">Erase all data</string>
+    <string name="you_wipe_removes">Removes: workouts, logged meals, water, supplement checks, level and XP.</string>
+    <string name="you_wipe_stays">Stays: your programs, meals and plans.</string>
+    <string name="you_wipe_title">Erase all data?</string>
+    <string name="you_wipe_text">This deletes everything you have logged and resets your level to 1. Programs, meals and plans are kept.</string>
+    <string name="you_wipe_continue">Continue</string>
+    <string name="you_wipe_sure_title">Are you sure?</string>
+    <string name="you_wipe_sure_text">Your log can\'t be recovered after this.</string>
+    <string name="you_wipe_confirm">Erase everything</string>
+</resources>

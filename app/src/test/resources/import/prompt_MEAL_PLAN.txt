@@ -1,0 +1,22 @@
+Take the meal plan we discussed earlier in this conversation and give it to me as a CSV file, in exactly the format below.
+
+Format (keep the header row and the column names exactly as shown):
+
+slot,time,meal,protein_g,carbs_g,fat_g,fiber_g,kcal,tags
+Breakfast,07:30,Oats with Whey,35,60,8,8,460,breakfast
+Lunch,13:00,Chicken Rice Bowl,45,60,12,4,520,lunch
+Snack,16:30,Greek Yogurt & Berries,20,25,4,3,220,snack
+Dinner,19:30,Salmon with Potatoes,40,45,18,5,500,dinner
+
+Rules:
+- One row per meal of the day, in eating order (max 20 rows).
+- slot: name of the slot (Breakfast, Lunch, ...). time: 24-hour HH:mm, optional.
+- protein_g, carbs_g, fat_g, fiber_g: grams for ONE portion, numbers only (0-1000).
+- kcal: calories for one portion; leave empty to calculate it from the macros.
+- tags: optional, separated by | (for example breakfast|high-protein).
+- The plan's daily targets are the sum of its meals.
+
+How to answer:
+- Use the details we agreed on in our conversation. If something we didn't settle is needed (for example sets, reps or macros), choose a sensible value instead of asking me.
+- Put the whole CSV in one code block so I can copy it, or attach it as a .csv file if you can.
+- Reply with only the CSV: no explanations, no extra columns, no blank rows.

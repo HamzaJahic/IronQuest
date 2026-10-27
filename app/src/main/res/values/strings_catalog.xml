@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Built-in exercise names, keyed by ProgramCatalog exercise id. -->
+    <string name="exercise_bench_press">Barbell Bench Press</string>
+    <string name="exercise_barbell_row">Barbell Row</string>
+    <string name="exercise_overhead_press">Overhead Press</string>
+    <string name="exercise_lat_pulldown">Lat Pulldown</string>
+    <string name="exercise_barbell_curl">Barbell Curl</string>
+    <string name="exercise_incline_bench">Incline Bench Press</string>
+    <string name="exercise_cable_row">Seated Cable Row</string>
+    <string name="exercise_triceps_pushdown">Triceps Pushdown</string>
+    <string name="exercise_back_squat">Back Squat</string>
+    <string name="exercise_romanian_deadlift">Romanian Deadlift</string>
+    <string name="exercise_leg_press">Leg Press</string>
+    <string name="exercise_leg_curl">Lying Leg Curl</string>
+    <string name="exercise_calf_raise">Standing Calf Raise</string>
+    <string name="exercise_deadlift">Deadlift</string>
+    <string name="exercise_front_squat">Front Squat</string>
+    <string name="exercise_bulgarian_split_squat">Bulgarian Split Squat</string>
+    <string name="exercise_leg_extension">Leg Extension</string>
+    <string name="exercise_cycling">Cycling Finisher</string>
+    <!-- Built-in day names, keyed by ProgramCatalog template id. -->
+    <string name="template_upper_1">Upper 1</string>
+    <string name="template_lower_1">Lower 1</string>
+    <string name="template_upper_2">Upper 2</string>
+    <string name="template_lower_2">Lower 2</string>
+    <!-- The built-in program has no stored name; shown wherever a program is named -->
+    <string name="program_built_in_name">Upper/Lower (built-in)</string>
+</resources>

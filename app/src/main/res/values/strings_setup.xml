@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_food_title">How do you want to track food?</string>
+    <string name="setup_food_settings_title">Food tracking</string>
+    <string name="setup_food_intro">You can change this later on the You tab.</string>
+    <string name="setup_food_mode_plan">Follow a meal plan</string>
+    <string name="setup_food_mode_plan_hint">Check off planned meals.</string>
+    <string name="setup_food_mode_on_the_fly">Log as I go</string>
+    <string name="setup_food_mode_on_the_fly_hint">Add what you ate, food by food.</string>
+    <string name="setup_food_mode_both">Both</string>
+    <string name="setup_food_mode_both_hint">A plan, plus anything extra.</string>
+    <string name="setup_food_plan_title">Your meal plan</string>
+    <string name="setup_food_plan_body">Import a plan you made with an AI chat, build one yourself, or do it later.</string>
+    <string name="setup_food_plan_import">Import a plan</string>
+    <string name="setup_food_plan_build">Build a plan</string>
+    <string name="setup_food_plan_later">Later</string>
+    <string name="setup_food_targets_title">Daily targets</string>
+    <string name="setup_food_targets_body">Optional. They colour your days and earn bonus XP.</string>
+    <string name="setup_food_targets_save">Save</string>
+    <string name="setup_food_targets_skip">Skip</string>
+    <string name="setup_food_targets_error">Check the numbers.</string>
+    <string name="setup_food_mode_selected_cd">Selected</string>
+</resources>

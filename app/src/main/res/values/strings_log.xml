@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="log_deleted_program">Deleted program</string>
+    <string name="log_title">Log</string>
+    <!-- Date patterns (java.time). Fixed English order on purpose; a translation may supply its own. -->
+    <string name="log_date_cd_pattern" translatable="false">EEEE d MMMM</string>
+    <string name="log_date_full_pattern" translatable="false">EEEE, d MMMM yyyy</string>
+    <!-- %2$s is the month name -->
+    <plurals name="log_month_summary_count">
+        <item quantity="one">%1$d workout day in %2$s</item>
+        <item quantity="other">%1$d workout days in %2$s</item>
+    </plurals>
+    <string name="log_hint">Tap a day to see, add or change a workout.</string>
+    <!-- %1$s is the full date -->
+    <string name="log_day_done_cd">%1$s, workout done</string>
+    <string name="log_rest_day">Rest day. Nothing logged.</string>
+    <string name="log_which_workout">Which workout?</string>
+    <string name="log_add_workout">Add workout</string>
+    <!-- %1$s is the workout's day name -->
+    <string name="log_delete_title">Delete %1$s?</string>
+    <string name="log_delete_text">Its XP is taken back.</string>
+    <!-- %1$s weight in kg, %2$d reps -->
+    <string name="log_set_weight_reps">\u2068%1$s × %2$d\u2069</string>
+</resources>

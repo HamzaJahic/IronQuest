@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Starter meals, inserted once at install in the device language; they are the user's data afterwards. -->
+    <string name="seed_meal_1">Oats with whey &amp; banana</string>
+    <string name="seed_meal_2">Scrambled eggs on toast</string>
+    <string name="seed_meal_3">Greek yogurt &amp; berries</string>
+    <string name="seed_meal_4">Protein shake</string>
+    <string name="seed_meal_5">Chicken &amp; rice bowl</string>
+    <string name="seed_meal_6">Tuna wrap</string>
+    <string name="seed_meal_7">Salmon, potatoes &amp; veg</string>
+    <string name="seed_meal_8">Beef chili</string>
+    <string name="seed_meal_9">Turkey pasta</string>
+    <string name="seed_meal_10">Cottage cheese &amp; nuts</string>
+    <!-- Tags of the starter meals. -->
+    <string name="seed_tag_breakfast">breakfast</string>
+    <string name="seed_tag_high_protein">high-protein</string>
+    <string name="seed_tag_snack">snack</string>
+    <string name="seed_tag_quick">quick</string>
+    <string name="seed_tag_lunch">lunch</string>
+    <string name="seed_tag_meal_prep">meal-prep</string>
+    <string name="seed_tag_dinner">dinner</string>
+    <!-- Starter supplement: its name and dose. -->
+    <string name="seed_supplement_name">Creatine</string>
+    <string name="seed_supplement_dose">5 g</string>
+</resources>

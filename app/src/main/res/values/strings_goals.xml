@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="goal_limit_break">Limit break</string>
+    <string name="goal_beat_last_time">Beat last time</string>
+    <string name="goal_food">Food</string>
+    <!-- %1$s exercise name, %2$s weight with unit -->
+    <string name="goal_limit_break_title">%1$s: move to %2$s</string>
+    <string name="goal_beat_last_time_title_minute">%1$s: one more minute</string>
+    <string name="goal_beat_last_time_title_rep">%1$s: one more rep</string>
+    <string name="goal_food_protein_done">Protein target reached</string>
+    <string name="goal_food_protein_title">Hit protein: %1$s to go</string>
+    <string name="goal_food_water_done">Water target reached</string>
+    <string name="goal_food_water_title">Drink water: %1$s to go</string>
+    <!-- %1$s lists the sets of the previous session -->
+    <string name="goal_detail_last_time">Last time: %1$s</string>
+    <string name="goal_detail_protein">%1$d of %2$s today</string>
+    <string name="goal_detail_water">%1$s of %2$s today</string>
+    <string name="goal_sets_none">nothing logged</string>
+    <!-- %1$s a list of rep counts: "12, 10" -->
+    <string name="goal_sets_reps">%1$s reps</string>
+    <!-- %1$s weight with unit, %2$s rep counts: "80 kg × 8, 8, 7" -->
+    <string name="goal_sets_weight_reps">\u2068%1$s × %2$s\u2069</string>
+    <!-- %1$s goal type label, %2$s the exercises -->
+    <string name="goal_notification_group">%1$s: %2$s</string>
+    <!-- %1$s exercise name, %2$s weight with unit -->
+    <string name="goal_notification_limit_break_item">%1$s %2$s</string>
+    <string name="goal_notification_food_open_many">Food goals still open</string>
+    <string name="goal_notification_water_open">Water target not reached yet</string>
+    <string name="goal_notification_protein_open">Protein target not reached yet</string>
+    <string name="goal_notification_protein_left">%1$s protein to go</string>
+    <string name="goal_notification_water_left">%1$s water to go</string>
+</resources>

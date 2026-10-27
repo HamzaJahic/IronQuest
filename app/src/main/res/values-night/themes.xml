@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Window-level theme only; all real styling lives in Compose (ui/theme). -->
+    <style name="Theme.IronQuest" parent="android:Theme.Material.NoActionBar">
+        <!-- Field notes dark `paper` (the default palette in dark mode). -->
+        <item name="android:windowBackground">#FF161B16</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

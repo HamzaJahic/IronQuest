@@ -1,0 +1,40 @@
+# Gradle and build output (every module)
+.gradle/
+build/
+.kotlin/
+/captures
+.externalNativeBuild
+.cxx
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.navigation/
+
+# Local machine settings (SDK path)
+local.properties
+
+# Signing keys and their passwords: never commit them
+*.jks
+*.keystore
+keystore.properties
+
+# Built apps (releases are attached to GitHub Releases, not committed)
+*.apk
+*.aab
+output-metadata.json
+
+# Logs, heap dumps, crash reports
+*.log
+*.hprof
+hs_err_pid*
+
+# macOS
+.DS_Store
+
+# Claude Code and its working files (CLAUDE.md stays tracked)
+.claude/
+.superpowers/
+claudedocs/
+docs/superpowers/
+CLAUDE.local.md

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Header of the live workout -->
+    <string name="workout_back_today">‹ Today</string>
+    <!-- %1$d is the current page, %2$d the number of pages -->
+    <string name="workout_header_exercise_progress">Exercise %1$d of %2$d</string>
+    <!-- Used instead when the day has a superset (a page can hold several exercises) -->
+    <string name="workout_header_page_progress">Page %1$d of %2$d</string>
+    <string name="workout_options_cd">Workout options</string>
+    <string name="workout_menu_restart">Restart workout</string>
+    <string name="workout_menu_stop">Stop workout</string>
+
+    <!-- Footer. %1$d sets logged, %2$d sets planned (picks the plural), %3$d session XP -->
+    <plurals name="workout_footer_status_count">
+        <item quantity="one">Autosaved · %1$d of %2$d set · %3$d XP</item>
+        <item quantity="other">Autosaved · %1$d of %2$d sets · %3$d XP</item>
+    </plurals>
+    <string name="workout_finish">Finish</string>
+    <string name="workout_finishing">Finishing…</string>
+
+    <!-- Pages -->
+    <string name="workout_log_set">Log set</string>
+    <string name="workout_all_sets_logged">All sets logged</string>
+    <string name="workout_add_set">+ Add set</string>
+    <string name="workout_add_round">+ Add round</string>
+    <string name="workout_next_exercise">Next exercise</string>
+    <!-- %1$s is the superset letter -->
+    <string name="workout_superset_title">Superset %1$s</string>
+    <!-- %1$d is the round being done, %2$d the number of rounds -->
+    <string name="workout_superset_round">Round %1$d of %2$d</string>
+    <plurals name="workout_superset_all_done_count">
+        <item quantity="one">All %1$d round done</item>
+        <item quantity="other">All %1$d rounds done</item>
+    </plurals>
+    <!-- Name of a superset member: %1$s is the superset letter, %2$d the position, giving "A2" -->
+    <string name="workout_superset_member">%1$s%2$d</string>
+    <!-- %1$s is a member name like "A2" -->
+    <string name="workout_superset_member_now">%1$s · now</string>
+    <!-- %1$s is the name of the next exercise -->
+    <string name="workout_superset_log_then">Log, then %1$s</string>
+    <!-- Two parts on one line: "A2 · Cable row", "A2 · Set 3", "Limit break · Bench press" -->
+    <string name="workout_dot_pair">%1$s · %2$s</string>
+    <string name="workout_partner_done">%1$s · %2$s · done</string>
+    <string name="workout_partner_next">%1$s · next: %2$s</string>
+
+    <!-- Overload suggestion chip. %1$s is a weight in kg; the first-time line takes a rep range -->
+    <string name="workout_overload_level_up">↑ Try %1$s kg</string>
+    <string name="workout_overload_hold">= Same weight, %1$s kg</string>
+    <string name="workout_overload_deload">↓ Deload to %1$s kg</string>
+    <string name="workout_overload_first_time">First time: pick a weight you own for %1$s</string>
+    <!-- Goal line. %1$s is the goal name, %2$d the bonus XP -->
+    <string name="workout_goal_line">%1$s · +%2$d XP at finish</string>
+    <string name="workout_goal_line_reached">✓ %1$s · +%2$d XP at finish</string>
+    <!-- Snackbar after a goal stamp. %1$s goal name, %2$s exercise, %3$d bonus XP -->
+    <string name="workout_goal_stamp_line">%1$s: %2$s · +%3$d XP at finish</string>
+
+    <!-- Current set. %1$d set number, %2$d number of sets, %3$s what was done last time -->
+    <string name="workout_set_line">Set %1$d of %2$d</string>
+    <string name="workout_set_line_ghost">Set %1$d of %2$d · last time %3$s</string>
+    <!-- A partner's next set. %1$s is a rep range -->
+    <string name="workout_prescription_reps">%1$s reps</string>
+    <!-- %1$s is the weight, %2$s the rep range -->
+    <string name="workout_prescription_weight">\u2068%1$s kg × %2$s\u2069</string>
+    <!-- A logged set. %1$s is the weight, %2$d the reps -->
+    <string name="workout_set_weight_reps">\u2068%1$s × %2$d\u2069</string>
+    <plurals name="workout_set_reps_count">
+        <item quantity="one">%1$d rep</item>
+        <item quantity="other">%1$d reps</item>
+    </plurals>
+
+    <!-- Steppers -->
+    <string name="workout_unit_reps">reps</string>
+    <!-- Unit shown after the big number; keeps its leading space -->
+    <string name="workout_stepper_unit_suffix">" %1$s"</string>
+    <!-- %1$s is the unit word (kg, reps, min) -->
+    <string name="workout_stepper_type_cd">Type %1$s</string>
+    <string name="workout_stepper_weight_caption">%1$s kg steps</string>
+    <string name="workout_stepper_target_caption">target %1$s</string>
+    <string name="workout_stepper_less_weight_cd">Less weight</string>
+    <string name="workout_stepper_more_weight_cd">More weight</string>
+    <string name="workout_stepper_fewer_reps_cd">Fewer reps</string>
+    <string name="workout_stepper_more_reps_cd">More reps</string>
+    <string name="workout_stepper_fewer_minutes_cd">Fewer minutes</string>
+    <string name="workout_stepper_more_minutes_cd">More minutes</string>
+    <string name="workout_beats_last_time">Beats last time</string>
+
+    <!-- Logged sets -->
+    <string name="workout_logged_header">Logged</string>
+    <string name="workout_logged_set">Set %1$d</string>
+    <string name="workout_xp_short">+%1$d</string>
+
+    <!-- Number dialog -->
+    <string name="workout_dialog_weight_title">Weight</string>
+    <string name="workout_dialog_minutes">Minutes</string>
+    <string name="workout_dialog_reps">Reps</string>
+    <string name="workout_dialog_weight_label">kg (0 for bodyweight)</string>
+    <string name="workout_dialog_edit_set_title">Edit set %1$d</string>
+
+    <!-- Restart / stop confirmation. %1$d is the number of sets logged so far -->
+    <string name="workout_restart_title">Restart workout?</string>
+    <string name="workout_stop_title">Stop workout?</string>
+    <plurals name="workout_restart_text_count">
+        <item quantity="one">This deletes the 1 set logged so far and their XP, and starts again from the first exercise.</item>
+        <item quantity="other">This deletes the %1$d sets logged so far and their XP, and starts again from the first exercise.</item>
+    </plurals>
+    <plurals name="workout_stop_text_count">
+        <item quantity="one">This deletes the 1 set logged so far and their XP. To keep them, tap Finish instead.</item>
+        <item quantity="other">This deletes the %1$d sets logged so far and their XP. To keep them, tap Finish instead.</item>
+    </plurals>
+    <string name="workout_restart_confirm">Restart</string>
+    <string name="workout_stop_confirm">Stop</string>
+
+    <!-- How-to link -->
+    <string name="workout_how_to_link">How to do it ›</string>
+    <string name="workout_how_to_failed">No app can open links</string>
+    <!-- %1$s is the exercise name -->
+    <string name="workout_how_to_cd">How to do %1$s, opens YouTube</string>
+
+    <!-- Not found -->
+    <string name="workout_not_found_title">Workout not found</string>
+    <string name="workout_not_found_body">Its program was deleted, so there\'s nothing to log here.</string>
+    <string name="workout_back_to_today">Back to Today</string>
+
+    <!-- Finish summary -->
+    <string name="workout_summary_done">Workout done</string>
+    <string name="workout_summary_time">Time</string>
+    <string name="workout_summary_sets">Sets</string>
+    <string name="workout_summary_xp">XP</string>
+    <string name="workout_summary_completion_bonus">Completion bonus</string>
+    <string name="workout_summary_total">Total</string>
+    <!-- Under a minute -->
+    <string name="workout_duration_under_minute">&lt; 1 min</string>
+    <!-- %1$d hours, %2$d minutes (two digits) -->
+    <string name="workout_duration_hours_minutes">%1$d h %2$02d min</string>
+
+    <!-- Messages (snackbars). %1$s is the system error text -->
+    <string name="workout_hint_minutes">Enter the minutes you rode</string>
+    <string name="workout_hint_weight_reps">Enter weight (0 for bodyweight) and reps</string>
+    <string name="workout_save_set_failed">Couldn\'t save set: %1$s</string>
+    <string name="workout_delete_set_failed">Couldn\'t delete set: %1$s</string>
+    <string name="workout_delete_workout_failed">Couldn\'t delete the workout: %1$s</string>
+    <string name="workout_finish_failed">Couldn\'t finish the workout: %1$s</string>
+
+    <!-- Log editor -->
+    <string name="workout_log_add_title">Add workout</string>
+    <string name="workout_log_edit_title">Edit workout</string>
+    <string name="workout_log_unavailable">This workout is no longer available.</string>
+    <!-- Date patterns (java.time). Fixed English order on purpose; a translation may supply its own. -->
+    <string name="workout_log_date_pattern" translatable="false">EEEE, d MMMM yyyy</string>
+    <string name="workout_log_last_time_pattern" translatable="false">d MMMM</string>
+    <!-- %1$s is a date like "6 October" -->
+    <string name="workout_log_last_time">Last time: %1$s</string>
+    <string name="workout_log_save">Save workout</string>
+    <string name="workout_log_delete">Delete workout</string>
+    <string name="workout_log_delete_title">Delete workout?</string>
+    <string name="workout_log_delete_text">Its XP is taken back.</string>
+    <!-- %1$s is a rep range -->
+    <string name="workout_log_target_reps">Target %1$s reps</string>
+    <string name="workout_log_target_minutes">Target %1$s min</string>
+    <string name="workout_log_copy_last">Same as last time</string>
+    <string name="workout_log_weight_label">Set %1$d kg</string>
+    <string name="workout_log_minutes_label">Set %1$d minutes</string>
+    <string name="workout_log_reps_label">reps</string>
+    <string name="workout_log_save_failed">Couldn\'t save: %1$s</string>
+    <string name="workout_log_delete_failed">Couldn\'t delete: %1$s</string>
+    <!-- %1$d is the set number, %2$s the exercise name -->
+    <string name="workout_log_invalid_set_minutes">Check set %1$d of %2$s: enter the minutes.</string>
+    <string name="workout_log_invalid_set_reps">Check set %1$d of %2$s: enter the reps, and a weight up to 1000 kg.</string>
+    <string name="workout_log_no_sets">Log at least one set.</string>
+</resources>

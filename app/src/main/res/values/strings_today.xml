@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Today: the line under the title about the day's first (main) lift. %1$s name, %2$s/%3$s weights in kg. -->
+    <string name="today_note_level_up">%1$s %2$s kg, up %3$s from last time</string>
+    <string name="today_note_hold">%1$s %2$s kg, same as last time</string>
+    <string name="today_note_deload">%1$s %2$s kg, down from %3$s</string>
+    <string name="today_note_first_time">First time: set a baseline</string>
+    <!-- %2$d sets, %3$s rep range (minutes for cardio). -->
+    <string name="today_note_cardio">%1$s, \u2068%2$d × %3$s\u2069 min</string>
+    <!-- Date patterns (java.time). Fixed English order on purpose; a translation may supply its own. -->
+    <string name="today_date_long_pattern" translatable="false">EEEE, d MMMM</string>
+    <string name="today_date_short_pattern" translatable="false">EEE d MMM</string>
+    <string name="today_title">Today</string>
+    <!-- %1$s is the day name, e.g. "Upper 1" -->
+    <string name="today_title_resume">Back to %1$s?</string>
+    <string name="today_title_start">Ready for %1$s?</string>
+    <string name="today_summary_this_week">This week</string>
+    <string name="today_summary_streak">Streak</string>
+    <string name="today_summary_protein">Protein</string>
+    <!-- %1$d workouts done, %2$d days in the program -->
+    <string name="today_summary_week_progress">%1$d / %2$d</string>
+    <!-- %1$d is a number of weeks -->
+    <string name="today_summary_streak_value">%1$d wk</string>
+    <string name="today_goals_title">Today\'s goals</string>
+    <string name="today_workout_title">The workout</string>
+    <string name="today_workout_resume">Resume workout</string>
+    <string name="today_workout_start">Start workout</string>
+    <!-- Exercises of a superset on one bullet: %1$s is the superset letter -->
+    <string name="today_workout_superset_prefix">"%1$s: "</string>
+    <string name="today_workout_superset_join">" + "</string>
+    <string name="today_workout_limit_break_mark">" ↑"</string>
+    <string name="today_other_days_title">Other days</string>
+    <plurals name="today_other_day_exercise_count">
+        <item quantity="one">%1$d exercise</item>
+        <item quantity="other">%1$d exercises</item>
+    </plurals>
+    <string name="today_other_day_in_progress">in progress</string>
+    <!-- %1$s is a short date -->
+    <string name="today_other_day_last">last %1$s</string>
+    <!-- Text action on an Other days row: makes that day Today's next workout -->
+    <string name="today_other_day_do_next">Do next</string>
+    <!-- Link under Start while a day picked with "Do next" is shown -->
+    <string name="today_back_to_rotation">Back to the rotation</string>
+    <string name="today_food_title">Food</string>
+    <string name="today_food_open_label">Open Food</string>
+    <string name="today_food_protein">Protein</string>
+    <!-- %1$d eaten, %2$s target, in grams -->
+    <string name="today_food_protein_progress">%1$d / %2$s g</string>
+    <string name="today_food_no_plan">No active meal plan</string>
+    <string name="today_food_all_done">All meals done</string>
+    <string name="today_food_none_planned">No meals planned</string>
+    <!-- %1$s slot label, %2$s its time of day -->
+    <string name="today_food_next_timed">Next: %1$s %2$s</string>
+    <string name="today_food_next">Next: %1$s</string>
+    <string name="today_food_nothing_logged">Nothing logged yet</string>
+    <!-- %1$s kcal eaten today -->
+    <string name="today_food_logged">Logged %1$s kcal</string>
+    <!-- %1$s kcal eaten, %2$s protein eaten, %3$s protein target, in grams -->
+    <string name="today_goal_done">Done</string>
+    <string name="today_no_program_text">No workout program is active. Import one, or bring the built-in split back, in Programs.</string>
+    <string name="today_no_program_open">Open programs</string>
+</resources>

@@ -1,0 +1,6 @@
+{"count": 3, "page": 1, "products": [
+  {"code": "7310865004703", "product_name": "Skyr Naturell", "brands": "Arla", "serving_quantity": 150,
+   "nutriments": {"proteins_100g": 11, "carbohydrates_100g": 4, "fat_100g": 0.2, "fiber_100g": 0, "energy-kcal_100g": 63}},
+  {"code": "123", "product_name": "Bar", "brands": "", "nutriments": {"proteins_100g": "20", "carbohydrates_100g": 40, "fat_100g": 10, "energy-kj_100g": 1674}},
+  {"code": "456", "product_name": "", "nutriments": {"proteins_100g": 1}}
+]}

@@ -1,0 +1,2 @@
+Built-in foods: U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, SR Legacy (2018). Public domain (CC0 1.0). https://fdc.nal.usda.gov/
+Online search: Open Food Facts, https://world.openfoodfacts.org/. Database licensed under the Open Database License (ODbL 1.0); product contents under the Database Contents License.
